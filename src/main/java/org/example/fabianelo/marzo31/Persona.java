@@ -5,7 +5,7 @@ import java.util.Date;
 public class Persona {
     public String nombre;
     private Character sexo;
-    private Date fechaNacimiento;
+    public Date fechaNacimiento;
     private String profesion;
 
     public Persona(String nombre, Character sexo, Date fechaNacimiento, String profesion) {
