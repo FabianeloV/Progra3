@@ -1,11 +1,11 @@
 package org.example.fabianelo.abril02.Practica1;
 
 public class Computador {
-    public String nombre;
-    public String modelo;
-    public Integer precio;
-    public Integer ram;
-    public Boolean ssd = Boolean.FALSE;
+    private String nombre;
+    private String modelo;
+    private Integer precio;
+    private Integer ram;
+    private Boolean ssd = Boolean.FALSE;
 
     public Computador() {}
 
