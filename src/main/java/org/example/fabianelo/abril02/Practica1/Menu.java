@@ -30,6 +30,9 @@ public class Menu {
 
         System.out.println("Ingrese la ram del computador: ");
         computador.setRam(sc.nextInt());
+
+        System.out.println("¿El computador tiene ssd?: (true/false))");
+        computador.setSsd(sc.nextBoolean());
     }
 
     public void listarComputador(Computador computador) {
@@ -37,7 +40,8 @@ public class Menu {
             System.out.println("Nombre del computador: " + computador.getNombre());
             System.out.println("Modelo del computador: " + computador.getModelo());
             System.out.println("Precio del computador: " + computador.getPrecio() + "$");
-            System.out.println("Ram del computador: " + computador.getRam() + "Gb\n");
+            System.out.println("Ram del computador: " + computador.getRam() + "Gb");
+            System.out.println("Ssd: " + computador.getSsd() + "\n");
         } else {
             System.out.println("El computador no existe\n");
         }
