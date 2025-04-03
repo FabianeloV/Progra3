@@ -2,9 +2,40 @@ package org.example.fabianelo.abril02.Practica1;
 
 import java.util.Scanner;
 
-public class Menu {
+public class Menu implements MenuInterfaz {
+    Scanner sc = new Scanner(System.in);
+
+    Computador computador = new Computador();
+
     public Menu() {}
 
+    public void mostrar() {
+        boolean option = true;
+
+        while (option) {
+            mostrarOpciones();
+            int opcion = sc.nextInt();
+            switch (opcion) {
+                case 1:
+                    listarComputador(computador);
+                    break;
+                case 2:
+                    crearComputador(computador);
+                    break;
+                case 3:
+                    eliminarComputador(computador);
+                    break;
+                case 4:
+                    option = false;
+                    break;
+                default:
+                    System.out.println("Opción no valida\n");
+                    break;
+            }
+        }
+    }
+
+    @Override
     public void mostrarOpciones() {
         System.out.print("------------------------------------\n");
         System.out.println("Escoja una opción: ");
@@ -15,6 +46,7 @@ public class Menu {
         System.out.print("------------------------------------\n");
     }
 
+    @Override
     public void crearComputador(Computador computador) {
         //Declarar el scanner
         Scanner sc = new Scanner(System.in);
@@ -35,6 +67,7 @@ public class Menu {
         computador.setSsd(sc.nextBoolean());
     }
 
+    @Override
     public void listarComputador(Computador computador) {
         if (computador.getModelo() != null) {
             System.out.println("Nombre del computador: " + computador.getNombre());
@@ -47,6 +80,7 @@ public class Menu {
         }
     }
 
+    @Override
     public void eliminarComputador(Computador computador) {
         computador.setNombre(null);
         computador.setModelo(null);
