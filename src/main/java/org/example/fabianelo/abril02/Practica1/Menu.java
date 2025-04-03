@@ -37,7 +37,7 @@ public class Menu implements MenuInterfaz {
 
     @Override
     public void mostrarOpciones() {
-        System.out.print("------------------------------------\n");
+        System.out.print("----------------MENU----------------\n");
         System.out.println("Escoja una opción: ");
         System.out.println("1. Listar datos del computador");
         System.out.println("2. Agregar computador");
