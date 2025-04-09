@@ -1,4 +1,4 @@
-package org.example.fabianelo.abril02.Practica1;
+package org.example.fabianelo.Practica1;
 
 public interface MenuInterfaz {
     void mostrarOpciones();
