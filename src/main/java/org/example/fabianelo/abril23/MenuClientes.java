@@ -50,8 +50,9 @@ public class MenuClientes {
     private void atenderCliente() {
         if (clientes.isEmpty()) {
            JOptionPane.showMessageDialog(null, "No hay clientes para atender", "ATENDER",  JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "El cliente " + clientes.poll() + " ha sido  atendido.", "ATENDER", JOptionPane.QUESTION_MESSAGE);
         }
-        JOptionPane.showMessageDialog(null, "El cliente " + clientes.poll() + " ha sido  atendido.", "ATENDER", JOptionPane.QUESTION_MESSAGE);
     }
 
     private void agregarCliente() {
