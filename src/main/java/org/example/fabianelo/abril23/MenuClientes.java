@@ -31,7 +31,7 @@ public class MenuClientes {
                     option = false;
                     break;
                 default:
-                    System.out.println("Opción inválida\n");
+                    JOptionPane.showMessageDialog(null, "Opción inválida","ERROR", JOptionPane.ERROR_MESSAGE);
                     break;
             }
         }
@@ -41,7 +41,6 @@ public class MenuClientes {
         if (clientes.isEmpty()) {
             JOptionPane.showMessageDialog(null, "No hay clientes registrados", "LISTAR CLIENTES", JOptionPane.INFORMATION_MESSAGE);
         } else {
-
             clientes.forEach(cliente -> JOptionPane.showMessageDialog(null, cliente, "LISTAR CLIENTES", JOptionPane.INFORMATION_MESSAGE)
             );
         }
