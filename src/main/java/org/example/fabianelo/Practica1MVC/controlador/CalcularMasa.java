@@ -17,6 +17,9 @@ public class CalcularMasa {
         });
     }
 
+    public CalcularMasa() {
+    }
+
     public String validarEntradas(String peso, String altura){
         if(peso.isEmpty() || altura.isEmpty()){
             return "No puede estar vacio ningún campo";
