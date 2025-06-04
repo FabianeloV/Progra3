@@ -30,4 +30,10 @@ class CalcularMasaTest extends CalcularMasa {
         assertEquals("No puede estar vacio ningún campo", validarEntradas("",""));
     }
 
+    //Test para validar que no pasen entradas vacias (erroneo)
+    @Test
+    void testValidarEntradas1() {
+        assertEquals("No puede estar vacio ningún campo", validarEntradas("80","1.78"));
+    }
+
 }

@@ -3,11 +3,8 @@ package org.example.fabianelo.Practica1MVC.controlador;
 import org.example.fabianelo.Practica1MVC.vista.Vista;
 
 public class CalcularMasa {
-    private Vista vista;
-
-    public CalcularMasa(Vista vista){
-        this.vista = vista;
-
+    public Vista vista = new Vista();
+    public CalcularMasa(){
         vista.getBotonSaludar().addActionListener(e -> {
             vista.mostrarMensaje(validarEntradas(vista.getPeso(), vista.getEstatura()));
         });
@@ -15,9 +12,6 @@ public class CalcularMasa {
         vista.getLimpiar().addActionListener(e -> {
             vista.limpiar();
         });
-    }
-
-    public CalcularMasa() {
     }
 
     public String validarEntradas(String peso, String altura){
@@ -47,7 +41,15 @@ public class CalcularMasa {
             return "Altura negativa, ingrese un altura válida";
         }
 
-        return "Su índice de masa corporal es: " + calcularMasa(pesoInt, alturaFloat);
+        String mayorMenor;
+
+        if (calcularMasa(pesoInt, alturaFloat) > 26) {
+            mayorMenor = "Correspondiente a sobrePeso";
+        } else {
+            mayorMenor = "Correspondiente a índice normal";
+        }
+
+        return "Su índice de masa corporal es: " + calcularMasa(pesoInt, alturaFloat) + "\n" + mayorMenor;
     }
 
     public Float calcularMasa(int peso, Float altura){
