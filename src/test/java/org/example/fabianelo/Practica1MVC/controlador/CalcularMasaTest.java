@@ -35,5 +35,4 @@ class CalcularMasaTest extends CalcularMasa {
     void testValidarEntradas1() {
         assertEquals("No puede estar vacio ningún campo", validarEntradas("80","1.78"));
     }
-
 }
